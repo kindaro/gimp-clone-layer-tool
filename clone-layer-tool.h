@@ -17,7 +17,6 @@
 #include <libgimp/gimp.h>
 #include <libgimp/gimpui.h>
 #include <libgimpmath/gimpmath.h>
-#include <libgimp/gimpdrawable.h>
 #include <libgimpbase/gimpbaseenums.h>
 
 /****************************************************

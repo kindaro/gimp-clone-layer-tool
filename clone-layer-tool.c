@@ -17,7 +17,6 @@
 #include "onExit.c"
 #include "onSuccess.c"
 #include "onCloneClick.c"
-#include <libgimp/gimplayer_pdb.h>
 
 static gchar *l_blure_proc = "plug-in-gauss";
 
