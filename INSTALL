@@ -1,0 +1,28 @@
+INSTALL
+=======
+
+For Linux and Unix users
+------------------------
+For a system wide installation simply state:
+
+	$gimptool-2.0 --install clone-layer-tool.c
+
+A restart of The GIMP is recommended.
+
+For Window users
+------------------------
+C:\gimptool-2.0 --install-admin c:\pach_to_plugin_src\clone-layer-tool.c
+
+!!! Note !!! 
+1. If your GIMP was installed to \Program Files\, you must reinstall it into 
+	folder which non contains a blank space in the name!
+	i.e.: c:\gimp\ or d:\gimp_2.7\, ...
+
+2. gimptool-2.0 required GTK+ libs and installed  MiniGW! 
+	Please install all needed soft and libs on your machine before compile plugin using gimptool-2.0.  
+
+
+Other platforms
+---------------
+I'm sorry I have no knowledge on how to install plugins on other platforms. I
+hope others will find a way.

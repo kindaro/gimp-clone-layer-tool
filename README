@@ -1,0 +1,109 @@
+README
+======
+
+CloneLayer Tool (CLT) is a C plugin for Gimp 2.7 to automatically duplicate 
+layers and apply to them some transformation and visual effects like - rotate, 
+scale, move, blur and others....
+This plugin works like batch processor which helps to make a set of clone 
+layers with transformation on each of them.
+Plugin shows the all change in "live mode" - on the gimp canvas (just set 
+needed values and click on the "Clone"). 
+
+NOTE!
+========
+CLT-v2.0b is in beta testing and it makes a mess in GIMP Undo stack! Please, 
+save your work before apply this plugin, or make duplicate image!
+
+
+LICENCE
+========
+
+Copyright (C) 2011 by Remy AWM. Distributed under the General Public
+License. See the file COPYING which contains the license.
+
+
+INSTALLATION
+================
+
+See the file INSTALL for instructions how to install the plugins.
+
+
+USAGE
+==================
+
+Once the plugin is installed successfully, the plugin can be found in The GIMP
+using the menu "Layer->Clone-Layer Tool...". 
+It works for full image on the current layer.  The selected region is ignored. (It will fixed in further)
+ 
+ The plugin dialog allows to adjust many parameters which sorted by groups:
+
+	The General Parameters:
+		
+		Clone Times - how many clones must be created  - from 1 to 1000;
+		
+		Interpolation - uses for transformation;
+		
+		Add clone layers as - 
+			- One layer - it will merge all clones to one layer;
+			- Grouping clone layers;
+			- Each clone to layer;
+
+		Autocroping layer - 
+			if checked - remove empty borders from the layer;
+			else - change layer to image size;
+
+		Orders - 
+			- UP - add new clone above previous layer ;
+			- DOWN - add new clone under previous layer;
+			
+		Add Background -> BG or FG -
+			blending cloned layers with background or foreground color.
+			
+			This option may be usefull for layer animation, when image 
+			placed on the clean layer and has a some transparency.
+				(In this case, after convertion to indexed colors the image 
+				may break a soft color transition. To avoid this effect, it
+				is necessary to replace alpha channel of the image to any 
+				color - to background or foreground.) 
+	
+	Resize (scale) group:     
+		- provides some values to set a fixed and random step to increase/decrease width or height of layer. 
+		Keep aspect - enabled a proportional scaling.
+		Resize Type - sets  direction of resize - to Top/Left corner, etc....
+	
+	Rotation group:
+		- provides parameters to set a fixed and random angle to rotate layer on each clone.
+		Coordinates -
+			Rotate Center X and Center Y - a rotate points
+		Get Coordinates - to set  Center X and Center Y point by corners - Top/Right; Buttom/Left, ect ...
+		
+	Move group:
+		- provides parameters to set a fixed and random step to increase/decrease distance between layers on each clone;
+		Move Layer From - selects corners between two layers to set a distance for them.
+
+	Effects group:
+		- has a few visual filters (effects) that could be added to layers. 
+		At the now, there are five filters:
+			Opacity - you can set fixed or random step to increase/decrease transparency.
+			Blur - the same, but for the blur.
+			Colorize - you can change image hue by fixed or random step.
+			Noise Spread - the same like blur, but for the noise spread.
+			Drop Shadow - adding shadow under image. 
+				(Note, the shadow area don't calculate on Move-steps!)
+				
+	Animate group:
+		- this feature provide a simple way to manage the GIMP animate layers, 
+		such as mode animation layer and speed layer.
+			On/Off - enable/disable animation setting.
+			Animation setting for First/Next and Last layer - 
+				Mode layer - [combine|replace|none]
+				Speed - speed in ms/ from 0 to 10000.
+				
+					...each setting will been added to end of layer name. 
+						for ex.:   layer_name-clt #1(300ms)(replace) 
+			
+		============================
+		
+
+
+
